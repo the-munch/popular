@@ -1,0 +1,32 @@
+{
+  "name": "-y",
+  "version": "1.0.0",
+  "description": "Popular dishes list.  That will scroll and list out the menu items and prices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarvinHo1/popular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarvinHo1/popular/issues"
+  },
+  "homepage": "https://github.com/MarvinHo1/popular#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0"
+  }
+}
