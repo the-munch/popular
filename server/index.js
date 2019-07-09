@@ -6,7 +6,7 @@ const db = require('../database/index.js')
 var bodyParser = require('body-parser')
 var morgan = require('morgan')
 
-
+//console.log
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
