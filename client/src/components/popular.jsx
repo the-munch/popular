@@ -7,7 +7,7 @@ class Popular extends React.Component {
     }
 render() {
     return(
-        <h1>Helllo!!!!!!!</h1>    
+        <h1>Helll0!!!</h1>    
         )
     }
 }
