@@ -1,4 +1,6 @@
 import React from 'react'
+import PhotoList from './photoList.jsx';
+
 
 class Popular extends React.Component {
     constructor(props) {
@@ -6,13 +8,19 @@ class Popular extends React.Component {
         this.state = {}
     }
 render() {
+    // {console.log(this.props.data[0].image)}
     return(
-        <h1>Helll0!!!</h1>    
+        <div>
+        <h1>Helloo!!!...  We have life!</h1>  
+        <PhotoList data = {this.props}/>
+        
+         </div>
         )
+    {console.log(Photolist)}
     }
 }
-{console.log('hello')}
-
+// {console.log('hello')}
+//* <div><img src={this.props.data[0].image}></img></div> */
 
 export default Popular
 

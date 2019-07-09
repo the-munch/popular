@@ -2,11 +2,11 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
-const db = require('../database/index.js')
+const db = require('../database/seed.js')
 var bodyParser = require('body-parser')
 var morgan = require('morgan')
 
-//console.log
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
