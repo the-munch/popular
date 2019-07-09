@@ -2,16 +2,16 @@ var db = require('./index.js');
 var faker = require('faker');
 var mongoose = require('mongoose');
 
-var popularDish = new mongoose.Schema({
-    name: String,
-    image: String,
-    price: Number,
-    revCount: Number,
-    phoCount:Number
-  });
+// var popularDish = new mongoose.Schema({
+//     name: String,
+//     image: String,
+//     price: Number,
+//     revCount: Number,
+//     phoCount:Number
+//   });
 
-//test
-  var Dish = db.model('Dish', popularDish);
+
+//   var Dish = db.model('Dish', popularDish);
 
   var seed = function seedData(){ 
 
