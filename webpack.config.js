@@ -4,7 +4,7 @@ module.exports = {
       rules: [
         { 
           test: [/\.jsx$/], 
-          exclude: /node_modules/,
+          exclude: [/node_modules/, /database/],
           use: {
             loader: 'babel-loader',
             options: {
@@ -12,6 +12,12 @@ module.exports = {
             }
           }
         },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader','css-loader'
+          ]
+        }
       ]
     },
      output: {
@@ -19,3 +25,6 @@ module.exports = {
       path: __dirname + '/client/dist'
     }
   };
+
+    //   /\.(sa|sc|c)ss$/
+    //       //   /\.css$/i

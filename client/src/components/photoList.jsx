@@ -1,13 +1,21 @@
 import React from 'react'
+import style from '../style.css'
+
+
 
 
 const Photolist = (props) => {
-    {console.log(props)}
+    {console.log(props.photo.data)}
     return (
         <div>
-        HMMMMMMMMMMM
+            {props.photo.data.map(pic => <img src = {pic.image} key = {pic._id}></img>)}
+            <div className = {style.test}> Test Me Please</div>
         </div>
     )
 }
-//<img src={this.props.data[0].image}></img> 
+
+
+
+
 export default Photolist
+
