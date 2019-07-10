@@ -4,12 +4,23 @@ module.exports = {
       rules: [
         { 
           test: [/\.jsx$/], 
-          exclude: /node_modules/,
+          exclude: [/node_modules/, /database/],
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-react', '@babel/preset-env']
             }
+          }
+        },
+        {
+          test: /\.css$/,
+          loader: 'style-loader',
+        },
+        {
+          test: /\.css$/,
+          loader: 'css-loader',
+          options: {
+            modules: true
           }
         },
       ]
@@ -19,3 +30,6 @@ module.exports = {
       path: __dirname + '/client/dist'
     }
   };
+
+    //   /\.(sa|sc|c)ss$/
+    //       //   /\.css$/i

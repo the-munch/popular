@@ -10,8 +10,8 @@ var popularDish = new mongoose.Schema({
     phoCount:Number
   });
 
-//test
-  var Dish = db.model('Dish', popularDish);
+
+  var Dish = mongoose.model('Dish', popularDish);
 
   var seed = function seedData(){ 
 
@@ -36,4 +36,6 @@ var popularDish = new mongoose.Schema({
             });
         }
     }
-    seed()
+    // seed()
+
+    module.exports.Dish = Dish

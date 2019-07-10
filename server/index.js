@@ -2,12 +2,29 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
+const db = require('../database/seed.js')
+var bodyParser = require('body-parser')
+var morgan = require('morgan')
 
 
-app.use(express.static(path.resolve(__dirname, '..', 'client', 'dist')))
-app.get('/', (req, res)=>{
-    res.send('ok')
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(morgan('dev'))
+app.use(express.static(path.resolve(__dirname, '..', 'client','dist')))
+
+
+
+
+app.get('/munch-popular', (req, res)=>{
+        db.Dish.find((err, Dish) => {
+        if (err) return console.error(err);
+        res.send(Dish)
+    })
 })
+
 
 
 
