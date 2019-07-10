@@ -14,10 +14,15 @@ module.exports = {
         },
         {
           test: /\.css$/,
-          use: [
-            'style-loader','css-loader'
-          ]
-        }
+          loader: 'style-loader',
+        },
+        {
+          test: /\.css$/,
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        },
       ]
     },
      output: {
