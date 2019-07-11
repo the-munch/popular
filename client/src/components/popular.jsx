@@ -1,5 +1,6 @@
 import React from 'react'
 import PhotoList from './photoList.jsx';
+import PopHeader from './header.jsx';
 
 
 class Popular extends React.Component {
@@ -10,8 +11,8 @@ class Popular extends React.Component {
 render() {
     // {console.log(this.props.data[0].image)}
     return(
-        <div>
-        <h1>Helloo!!!...  We have life!</h1>  
+        <div>  
+        <PopHeader/>
         <PhotoList photo = {this.props}/> 
          </div>
         )
