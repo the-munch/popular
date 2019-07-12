@@ -1,8 +1,64 @@
 
-.work {
-  color: red;   
-  } 
+.moduleContainer {
+  width: 629px;
+  height: 249px;
+  /* border-style: solid; */
+}
 
-.container {
-  color: yellow;
+.containerPopularDishes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-around;
+  /* border-style: solid; */
+  color: #d32323;
+  width: 653px;
+  height: 26px;
+}
+
+.popularDish {
+  display: flex;
+  align-items: flex-start;
+  font-size: 21px;
+  width: 470px;
+  height: 26px;
+  margin: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.viewFullMenu {
+  width: 94.63px;
+  height: 16px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #0073bb;
+  text-decoration: none;
+}
+
+.spanForLeftArrow {
+  width: 14px;
+  height: 14px;
+  margin: 10px;
+  color: #333;
+}
+
+.spanForRightArrow {
+  width: 14px;
+  height: 14px;
+  margin: 10px;
+  color: #333;
+}
+
+.leftCheveronArrow {
+  width: 6.41px;
+  height: 10px;
+}
+
+.rightCheveronArrow {
+  width: 6.41px;
+  height: 10px;
+}
+
+.foodImages {
+  width: 190px;
+  height: 179px;
 }

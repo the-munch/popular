@@ -4,11 +4,15 @@ import style from '../style.css';
 
 const PopHeader = props => {
     return  (
-        <div className = {style.container}> 
-            <div>popular dish </div>
-            <div> view menu</div>
-            <div>left arrow method</div> 
-            <div>right arrow method</div>
+        <div className = {style.containerPopularDishes}> 
+            <div> <h2 className = {style.popularDish} > popular dish </h2> </div>
+            <div> <a className = {style.viewFullMenu} href="" >View Full Menu</a></div>
+            <div>
+                <span className = {style.spanForLeftArrow}><i classname = {style.leftCheveronArrow} class="fas fa-chevron-left"></i></span>
+                </div> 
+            <div>
+                <span className = {style.spanForRightArrow}><i classname = {style.rightCheveronArrow} class="fas fa-chevron-right"></i></span>
+                </div>
         </div>
     );
 }
