@@ -14,7 +14,7 @@ render() {
     return(
         <div className = {style.moduleContainer}>  
         <div><PopHeader/></div>
-        <div><PhotoList photo = {this.props}/> </div>
+        <div><PhotoList data = {this.props.data}/> </div>
          </div>
         )
     {console.log(Photolist)}

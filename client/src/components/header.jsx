@@ -8,10 +8,10 @@ const PopHeader = props => {
             <div> <h2 className = {style.popularDish} > popular dish </h2> </div>
             <div> <a className = {style.viewFullMenu} href="" >View Full Menu</a></div>
             <div>
-                <span className = {style.spanForLeftArrow}><i classname = {style.leftCheveronArrow} class="fas fa-chevron-left"></i></span>
+                <span className = {style.spanForLeftArrow}><i class="fas fa-chevron-left"></i></span>
                 </div> 
             <div>
-                <span className = {style.spanForRightArrow}><i classname = {style.rightCheveronArrow} class="fas fa-chevron-right"></i></span>
+                <span className = {style.spanForRightArrow}><i class="fas fa-chevron-right"></i></span>
                 </div>
         </div>
     );
