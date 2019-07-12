@@ -49,27 +49,62 @@
   color: #333;
 }
 
+.test {
+  padding-top: 6px;
+  width: 192px;
+  height: 188px;
+  margin-right: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.test:hover {
+  padding-top: 0px;
+}
 
 .containerForPopularDishImage {
   display: flex;
   padding-top: 6px;
-  width: 629px;
-  height: 217px;
+  max-width: 623px;
+  max-height: 217px;
   font-size: 14px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 6px, 0px, 30px;
+  overflow-x: auto;
+}
+.containerForPopularDishImage::-webkit-scrollbar { 
+  display: none; 
 }
 
 .containerForImagesAndContent {
   width: 192px;
   height: 181px;
-  margin-right: 12px;
   border: solid 1px #e6e6e6;
   border-radius: 4px;
   position: relative;
-  transition: box-shadow 200ms, margin 200ms;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
+.containerForImagesAndContent::before{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 500ms;
+  transition-duration: 200ms, 200ms;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+}
+
+.containerForImagesAndContent:hover::before {
+  opacity: 1;
+}
+
 
 .popularDishDivContainer {
   position: relative;
