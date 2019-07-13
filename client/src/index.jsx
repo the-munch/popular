@@ -6,3 +6,5 @@ import Data from './components/exampleData.js'
 
 
 ReactDOM.render(< Popular data = {Data}/>, document.getElementById('test'))
+
+
