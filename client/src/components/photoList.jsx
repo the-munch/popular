@@ -4,13 +4,6 @@ import style from '../style.css'
 
 
 const Photolist = (props) => {
-<<<<<<< HEAD
-
-    return (
-        <div>
-            {props.data.map(pic => <span><img src = {pic.image} key = {pic._id} ></img></span>)}
-            <h2 className = {style.work}> Test Me Please</h2>
-=======
     {console.log(props.data)}
     {console.log(props.data[0].image)}
     return (
@@ -33,15 +26,10 @@ const Photolist = (props) => {
             </div>
           </div>
             )}
->>>>>>> master
         </div>
     )
 }
 
-<<<<<<< HEAD
-// {console.log(props.photo.data)}
-//  <h2 className = {style.work}> Test Me Please</h2>
-=======
 // {props.data.map(pic => <img className ={style.foodImages} src = {pic.image} key = {pic._id}></img>)}
        
 // image: "https://popularlist.s3-us-west-1.amazonaws.com/munch3.jpg"
@@ -51,7 +39,6 @@ const Photolist = (props) => {
 // revCount: 3
 // __v: 0
 // _id: "5d24f4c6ee0020e1f0a649ff"
->>>>>>> master
 
 export default Photolist
 
