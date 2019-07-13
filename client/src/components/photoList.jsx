@@ -4,10 +4,10 @@ import style from '../style.css'
 
 
 const Photolist = (props) => {
-    {console.log(props.data)}
-    {console.log(props.data[0].image)}
+    // {console.log(props.data)}
+    // {console.log(props.data[0].image)}
     return (
-        <div className = {style.containerForPopularDishImage}>
+        <div className = {style.containerForPopularDishImage} id = 'containerForContent'> 
             {props.data.map(pic =>
           <div className = {style.test}>
             <div className = {style.containerForImagesAndContent}>
@@ -32,13 +32,6 @@ const Photolist = (props) => {
 
 // {props.data.map(pic => <img className ={style.foodImages} src = {pic.image} key = {pic._id}></img>)}
        
-// image: "https://popularlist.s3-us-west-1.amazonaws.com/munch3.jpg"
-// name: "ullam"
-// phoCount: 2
-// price: 7
-// revCount: 3
-// __v: 0
-// _id: "5d24f4c6ee0020e1f0a649ff"
 
 export default Photolist
 
