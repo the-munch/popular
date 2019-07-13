@@ -1,35 +1,35 @@
 module.exports = {
-    entry: __dirname + '/client/src/index.jsx',
-    module: {
-      rules: [
-        { 
-          test: [/\.jsx$/], 
-          exclude: [/node_modules/, /database/],
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-react', '@babel/preset-env']
-            }
-          }
-        },
-        {
-          test: /\.css$/,
-          loader: 'style-loader',
-        },
-        {
-          test: /\.css$/,
-          loader: 'css-loader',
+  entry: `${__dirname}/client/src/index.jsx`,
+  module: {
+    rules: [
+      {
+        test: [/\.jsx$/],
+        exclude: [/node_modules/, /database/],
+        use: {
+          loader: 'babel-loader',
           options: {
-            modules: true
-          }
+            presets: ['@babel/preset-react', '@babel/preset-env'],
+          },
         },
-      ]
-    },
-     output: {
-      filename: 'bundle.js',
-      path: __dirname + '/client/dist'
-    }
-  };
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader',
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        options: {
+          modules: true,
+        },
+      },
+    ],
+  },
+  output: {
+    filename: 'bundle.js',
+    path: `${__dirname}/client/dist`,
+  },
+};
 
-    //   /\.(sa|sc|c)ss$/
-    //       //   /\.css$/i
+//   /\.(sa|sc|c)ss$/
+//       //   /\.css$/i

@@ -2,6 +2,7 @@
 .moduleContainer {
   width: 629px;
   height: 249px;
+  background-color: #fff;
   /* border-style: solid; */
 }
 
@@ -70,11 +71,17 @@
   font-size: 14px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 6px, 0px, 30px;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 .containerForPopularDishImage::-webkit-scrollbar { 
   display: none; 
 }
+
+/* #containerForContent {
+  max-width: 623px;
+  max-height: 217px;
+  overflow-x: scroll;
+} */
 
 .containerForImagesAndContent {
   width: 192px;

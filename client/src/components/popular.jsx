@@ -8,12 +8,28 @@ class Popular extends React.Component {
     constructor(props) {
         super(props)
         this.state = {}
+
+        this.scrollLeft = this.scrollLeft.bind(this)
+        this.scrollRight = this.scrollRight.bind(this)
     }
+
+scrollLeft() {
+    document.getElementById('containerForContent').scrollLeft -= 500;
+}
+
+scrollRight() {
+    document.getElementById('containerForContent').scrollLeft += 500;
+}
+
+
 render() {
-    // {console.log(this.props.data[0].image)}
+    // {console.log(this.scrollLeft)}
     return(
         <div className = {style.moduleContainer}>  
-        <div><PopHeader/></div>
+        <div><PopHeader
+        scrollLeft = {this.scrollLeft} 
+        scrollRight = {this.scrollRight}
+        /></div>
         <div><PhotoList data = {this.props.data}/> </div>
          </div>
         )
@@ -23,4 +39,3 @@ render() {
 
 export default Popular
 
-// data = {this.props.data}

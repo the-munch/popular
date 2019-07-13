@@ -3,15 +3,16 @@ import style from '../style.css';
 
 
 const PopHeader = props => {
+    // console.log(props.scroll)
     return  (
         <div className = {style.containerPopularDishes}> 
             <div> <h2 className = {style.popularDish} > popular dish </h2> </div>
             <div> <a className = {style.viewFullMenu} href="" >View Full Menu</a></div>
             <div>
-                <span className = {style.spanForLeftArrow}><i class="fas fa-chevron-left"></i></span>
+                <button className = {style.spanForLeftArrow} onClick = {props.scrollLeft} type="button"><i class="fas fa-chevron-left"></i></button>
                 </div> 
             <div>
-                <span className = {style.spanForRightArrow}><i class="fas fa-chevron-right"></i></span>
+                <button className = {style.spanForRightArrow} onClick = {props.scrollRight}><i class="fas fa-chevron-right"></i></button>
                 </div>
         </div>
     );
