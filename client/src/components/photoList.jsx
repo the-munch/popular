@@ -4,8 +4,6 @@ import style from '../style.css'
 
 
 const Photolist = (props) => {
-    // {console.log(props.data)}
-    // {console.log(props.data[0].image)}
     return (
         <div className = {style.containerForPopularDishImage} id = 'containerForContent'> 
             {props.data.map(pic =>

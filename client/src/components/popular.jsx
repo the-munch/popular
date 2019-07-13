@@ -14,11 +14,13 @@ class Popular extends React.Component {
     }
 
 scrollLeft() {
-    document.getElementById('containerForContent').scrollLeft -= 500;
+    var scroll = document.getElementById('containerForContent').scrollLeft -= 500;
+    console.log(scroll)
+    return scroll
 }
 
 scrollRight() {
-    document.getElementById('containerForContent').scrollLeft += 500;
+    return document.getElementById('containerForContent').scrollLeft += 500;
 }
 
 
