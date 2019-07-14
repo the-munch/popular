@@ -14,7 +14,7 @@ class Popular extends React.Component {
 
         this.scrollLeft = this.scrollLeft.bind(this)
         this.scrollRight = this.scrollRight.bind(this)
-        // this.testcall = this.testcall.bind(this)
+        this.clickScroll = this.clickScroll.bind(this)
     }
 
 componentDidMount() {
@@ -30,19 +30,29 @@ componentDidMount() {
  });
 }
 
-// (state) => {
-//     return {quantity: state.quantity + 1};
-//   });
-
-// var state = Object.assign({}, this.state);
-// this.state = data;
-// this.setState(state);
-scrollLeft() {
-    document.getElementById('containerForContent').scrollLeft -= 500;
+clickScroll(container,scoll,miliSec,distance,value){
+    var count = 0;
+    const scrollInterval = setInterval(function(){
+        if(scoll == 'scrollLeft'){
+            container.scrollLeft -= value;
+        } else {
+            container.scrollLeft += value;
+        }
+        count += value;
+        if(count >= distance){
+            clearInterval(scrollInterval);
+        }
+    }, miliSec);
 }
 
+scrollLeft() {
+    const container = document.getElementById('containerForContent');
+    this.clickScroll(container,'scrollLeft',5,610,10);
+} 
+
 scrollRight() {
-    document.getElementById('containerForContent').scrollLeft += 500;
+    const container = document.getElementById('containerForContent');
+    this.clickScroll(container,'scrollRight',5,610,10);
 }
 
 
