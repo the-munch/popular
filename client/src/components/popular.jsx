@@ -4,7 +4,6 @@ import PhotoList from './photoList.jsx';
 import PopHeader from './header.jsx';
 import style from '../style.css';
 
-
 class Popular extends React.Component {
     constructor(props) {
         super(props)
