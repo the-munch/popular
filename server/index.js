@@ -15,10 +15,11 @@ app.use(morgan('dev'));
 app.use(express.static(path.resolve(__dirname, '..', 'client', 'dist')));
 
 app.get('/munch-popular', (req, res) => {
+  const random = Math.floor(Math.random() * 100)
   db.Dish.find((err, Dish) => {
     if (err) return console.error(err);
     res.send(Dish);
-  });
+  }).limit(10).skip(random);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

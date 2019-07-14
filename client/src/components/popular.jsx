@@ -1,41 +1,81 @@
 import React from 'react'
+import $ from "jquery";
 import PhotoList from './photoList.jsx';
 import PopHeader from './header.jsx';
-import style from '../style.css'
-
+import style from '../style.css';
 
 class Popular extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            list: []
+        }
 
         this.scrollLeft = this.scrollLeft.bind(this)
         this.scrollRight = this.scrollRight.bind(this)
+        this.clickScroll = this.clickScroll.bind(this)
     }
 
+<<<<<<< HEAD
 scrollLeft() {
     var scroll = document.getElementById('containerForContent').scrollLeft -= 500;
     console.log(scroll)
     return scroll
+=======
+componentDidMount() {
+    $.ajax({
+    method: 'GET',
+    url: '/munch-popular',
+    success: (data) => {
+        // console.log(data)
+        this.setState(() => {
+            return {list: data};
+          });
+    }
+ });
+>>>>>>> master
 }
 
+clickScroll(container,scoll,miliSec,distance,value){
+    var count = 0;
+    const scrollInterval = setInterval(function(){
+        if(scoll == 'scrollLeft'){
+            container.scrollLeft -= value;
+        } else {
+            container.scrollLeft += value;
+        }
+        count += value;
+        if(count >= distance){
+            clearInterval(scrollInterval);
+        }
+    }, miliSec);
+}
+
+scrollLeft() {
+    const container = document.getElementById('containerForContent');
+    this.clickScroll(container,'scrollLeft',5,610,10);
+} 
+
 scrollRight() {
+<<<<<<< HEAD
     return document.getElementById('containerForContent').scrollLeft += 500;
+=======
+    const container = document.getElementById('containerForContent');
+    this.clickScroll(container,'scrollRight',5,610,10);
+>>>>>>> master
 }
 
 
 render() {
-    // {console.log(this.scrollLeft)}
     return(
         <div className = {style.moduleContainer}>  
         <div><PopHeader
         scrollLeft = {this.scrollLeft} 
         scrollRight = {this.scrollRight}
         /></div>
-        <div><PhotoList data = {this.props.data}/> </div>
+        <div><PhotoList data = {this.state.list}/> </div>
          </div>
         )
-    {console.log(Photolist)}
     }
 }
 
