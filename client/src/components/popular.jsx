@@ -16,6 +16,12 @@ class Popular extends React.Component {
         this.clickScroll = this.clickScroll.bind(this)
     }
 
+<<<<<<< HEAD
+scrollLeft() {
+    var scroll = document.getElementById('containerForContent').scrollLeft -= 500;
+    console.log(scroll)
+    return scroll
+=======
 componentDidMount() {
     $.ajax({
     method: 'GET',
@@ -27,6 +33,7 @@ componentDidMount() {
           });
     }
  });
+>>>>>>> master
 }
 
 clickScroll(container,scoll,miliSec,distance,value){
@@ -50,8 +57,12 @@ scrollLeft() {
 } 
 
 scrollRight() {
+<<<<<<< HEAD
+    return document.getElementById('containerForContent').scrollLeft += 500;
+=======
     const container = document.getElementById('containerForContent');
     this.clickScroll(container,'scrollRight',5,610,10);
+>>>>>>> master
 }
 
 
