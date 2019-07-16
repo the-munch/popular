@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 var popularDish = new mongoose.Schema({
   restuarant: {
+    restuarantID: Number,  
     name: String,
     price: Number,
     revCount: Number,
@@ -42,6 +43,7 @@ var seed = function seedData() {
     };
     var popDish = new Dish ({
       restuarant: {
+        restuarantID: `${i}`,  
         name: names,
         price: ranNum(35),
         revCount: ranNum(30),
@@ -59,7 +61,6 @@ var seed = function seedData() {
       count7 = count7 + 8;
       count8 = count8 + 9;
       count9++;
-
       if (count >= 100|| count1 >= 100|| count2 >= 100|| count3 >= 100|| count4 >= 100|| count5 >= 100|| count6 >= 100|| count7 >= 100|| count8 >= 100) {
       count = 1;
       count1 = 2;
