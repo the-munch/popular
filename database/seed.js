@@ -36,6 +36,6 @@ var popularDish = new mongoose.Schema({
             });
         }
     }
-    seed()
+    // seed()
 
     module.exports.Dish = Dish
