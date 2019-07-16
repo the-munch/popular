@@ -11,55 +11,74 @@ describe('components', () => {
     shallow(<Popular />)
     });
 })
-
 describe('components', () => {
     it('Popular Dish Photolist Renders', () => {
      shallow(<Photolist data = {[]} />)
       });
 })
-
 describe('components', () => {
   it('Popular Dish Header Renders', () => {
     shallow(<PopHeader />)
     });
 })
-
-describe('Test Button Click', () => {
+describe('Test Left Button Click', () => {
   it('Test Click Event For Left Button', () => {
-    const button = mount(<PopHeader />);
-    button.find('.spanForLeftArrow').simulate('click')
+    const wrapper = shallow(<PopHeader />);
+    wrapper.find('.spanForLeftArrow').simulate('click')
   });
-  it('Test Click Event For Reft Button', () => {
+  it('Test Right Button Click', () => {
     const wrapper = shallow(<PopHeader />);
     wrapper.find('.spanForRightArrow').simulate('click')
+ 
   });
 });
 
-describe('Testing Jest and Enzyme assertions', () => {
-  it('.toExist', () => {
-    const wrapper = shallow(<Popular data = {[]}/>);
-    expect(wrapper.instance().scrollLeft()).toBeCalledTimes(1);
-  })
-})
+describe('Parent Popular Component', () => {
+  const wrapper = shallow(<Popular />)
+  it('State exist', () =>{
+      expect(wrapper.state()).toExist;
+  });
+  it('State should have no items initially in the state', () => {
+      expect(wrapper.state('list')).toHaveLength(0);
+    });
+  });
 
+  // describe('Parent Popular Component', () => {
+  // let wrapper;
+  // beforeEach(() => {
+  //   wrapper = shallow(<Popular />);
+  // });
 
+  //   it('should check `componentDidMount()`', () => {
+  //     const instance = wrapper.instance();
+  //     jest.spyOn(instance, 'randomFunction'); 
+  //     instance.componentDidMount();
+  //     expect(instance.randomFunction).toHaveBeenCalledTimes(1); 
+  //   });
+  // });
+//   it('should open modal on click', () => {
+//     const clickFn = jest.fn();
+    // wrapper.setProps({
+    //     onOpenClick: clickFn,
+    // });
+//     wrapper.find('.foodImg').simulate('click');
+//     expect(clickFn).toHaveBeenCalled();
+// });
+
+  // const mouseOut = jest.fn();
+  // const wrapper = shallow(<ImageGallery images={['img1', 'img2', 'img3']}/>);
+  // });
+  // wrapper.find('.gallery').simulate('mouseout');
+  // expect(mouseOut).toHaveBeenCalled();
 
 // expect(wrapper.instance().modalLeft).toHaveBeenCalled()
 
-describe('Testing Jest and Enzyme assertions', () => {
-  it('.toBeChecked', () => {
-    const wrapper = shallow(<Popular />);
-    expect(wrapper.find('.moduleContainer')).toBeChecked;
-    expect(wrapper.find('scrollLeft')).toBeChecked;
-  })
-})
+// it('should have methods that scroll left and right', () => {
+//   const wrapper = mount(<PopHeader />)
 
-describe('Testing Jest and Enzyme assertions', () => {
-  it('.toExist', () => {
-    const wrapper = shallow(<Popular />);
-    expect(wrapper.find('If any Letter that exist within this parent component')).toExist;
-    expect(wrapper.find('testing is hard')).toExist;
-    expect(wrapper.find('learning as we go')).toExist;
-    expect(wrapper.find('I need to test functionality')).toExist;
-  })
-})
+      
+//       simulate.scrollLeft(); 
+//       // expect(wrapper.state('currStart')).toEqual(1);
+//   });
+
+  // images={['img1', 'img2', 'img3']}
