@@ -3,6 +3,7 @@ import $ from "jquery";
 import PhotoList from './photoList.jsx';
 import PopHeader from './header.jsx';
 import style from '../style.css';
+// import axios from 'axios'
 
 class Popular extends React.Component {
     constructor(props) {
@@ -16,26 +17,33 @@ class Popular extends React.Component {
         this.clickScroll = this.clickScroll.bind(this)
     }
 
-<<<<<<< HEAD
-scrollLeft() {
-    var scroll = document.getElementById('containerForContent').scrollLeft -= 500;
-    console.log(scroll)
-    return scroll
-=======
 componentDidMount() {
     $.ajax({
-    method: 'GET',
-    url: '/munch-popular',
-    success: (data) => {
-        // console.log(data)
-        this.setState(() => {
-            return {list: data};
-          });
-    }
- });
->>>>>>> master
+        method: 'GET',
+        url: '/munch-popular',
+        success: (data) => {
+            // console.log(data)
+            this.setState(() => {
+                return {list: data};
+              });
+        }
+     });
 }
 
+
+// axios.get('/munch-popular')
+//     .then(({data}) => this.setState(() => {list:data}))
+//     .catch((err)=>console.log(err))
+//     $.ajax({
+//     method: 'GET',
+//     url: '/munch-popular',
+//     success: (data) => {
+//         // console.log(data)
+//         this.setState(() => {
+//             return {list: data};
+//           });
+//     }
+//  });
 clickScroll(container,scoll,miliSec,distance,value){
     var count = 0;
     const scrollInterval = setInterval(function(){
@@ -57,12 +65,8 @@ scrollLeft() {
 } 
 
 scrollRight() {
-<<<<<<< HEAD
-    return document.getElementById('containerForContent').scrollLeft += 500;
-=======
     const container = document.getElementById('containerForContent');
     this.clickScroll(container,'scrollRight',5,610,10);
->>>>>>> master
 }
 
 
