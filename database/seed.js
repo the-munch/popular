@@ -44,7 +44,4 @@ seed();
 seed();
 seed();
 seed();
-
-
-
 module.exports.Dish = Dish

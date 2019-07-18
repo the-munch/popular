@@ -26,7 +26,7 @@ app.get('/popular/:id', (req, res) => {
       console.log(err);
       res.sendStatus(500);
     } else {
-      res.send(Dish)
+      res.send(Dish);
     }
   });
 });

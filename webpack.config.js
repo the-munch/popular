@@ -31,5 +31,3 @@ module.exports = {
   },
 };
 
-//   /\.(sa|sc|c)ss$/
-//       //   /\.css$/i

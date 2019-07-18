@@ -4,7 +4,8 @@
   "description": "Popular dishes list.  That will scroll and list out the menu items and prices.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "start": "node ./server/index.js",
+    "test1": "jest",
     "react-dev": "webpack -d --watch"
   },
   "repository": {

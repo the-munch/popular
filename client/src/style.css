@@ -35,6 +35,18 @@
   text-decoration: none;
 }
 
+.viewFullMenu:hover {
+text-decoration: underline
+}
+
+.arrowContainers {
+  user-select: none;
+}
+
+.fa-chevron-right {
+  user-select: none;
+}
+
 .spanForLeftArrow {
   width: 14px;
   height: 14px;
@@ -43,9 +55,17 @@
   padding: 0;
   border: none;
   background: none;
+  user-select: none;
+}
+
+.spanForLeftArrow:hover {
+cursor: pointer;
+color: #666;
+user-select: none;
 }
 
 .spanForRightArrow {
+  user-select: none;
   width: 14px;
   height: 14px;
   margin: 10px;
@@ -55,8 +75,15 @@
   background: none;
 }
 
+.spanForRightArrow:hover {
+  cursor: pointer;
+  color: #666;
+  user-select: none;
+}
+
 .test {
   padding-top: 6px;
+  padding-bottom: 25px;
   width: 192px;
   height: 188px;
   margin-right: 12px;
@@ -102,7 +129,7 @@
   box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 500ms;
-  transition-duration: 200ms, 200ms;
+  transition-duration: 700ms, 700ms;
   transition-timing-function: ease, ease;
   transition-delay: 0s, 0s;
 }
