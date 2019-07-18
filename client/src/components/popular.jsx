@@ -3,7 +3,7 @@ import $ from "jquery";
 import PhotoList from './photoList.jsx';
 import PopHeader from './header.jsx';
 import style from '../style.css';
-// import axios from 'axios'
+import axios from 'axios'
 
 class Popular extends React.Component {
     constructor(props) {
@@ -18,32 +18,34 @@ class Popular extends React.Component {
     }
 
 componentDidMount() {
+    let urlStrings = location.href.split('/')
+    let num = urlStrings [urlStrings.length-2]; 
     $.ajax({
         method: 'GET',
-        url: '/munch-popular',
+        url: `/popular/${num}`,
         success: (data) => {
-            // console.log(data)
+            console.log(typeof data, 'Im not nothing')
             this.setState(() => {
                 return {list: data};
-              });
+            });
         }
-     });
+    });
 }
+// axios.get(`/popular/:${num}`)
+// .then(({data}) => this.setState(() => {list:data} ))
+// .catch((err)=>console.log(err))
 
-
-// axios.get('/munch-popular')
-//     .then(({data}) => this.setState(() => {list:data}))
-//     .catch((err)=>console.log(err))
-//     $.ajax({
+// $.ajax({
 //     method: 'GET',
-//     url: '/munch-popular',
+//     url: `/popular/:${num}`,
 //     success: (data) => {
-//         // console.log(data)
+//         console.log(data)
 //         this.setState(() => {
 //             return {list: data};
 //           });
 //     }
 //  });
+
 clickScroll(container,scoll,miliSec,distance,value){
     var count = 0;
     const scrollInterval = setInterval(function(){
