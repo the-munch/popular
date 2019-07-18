@@ -2,15 +2,15 @@ import React from 'react';
 import style from '../style.css'
 
 
-
 const Photolist = (props) => {
+    // Note:  A better way to do this is have 10 different documents from Mongo created with the same resturant ID and map them out
     return (
         <div className = {style.containerForPopularDishImage} id = 'containerForContent'> 
             {props.data.map(pic =>
           <div className = {style.test}>
             <div className = {style.containerForImagesAndContent}>
                 <div className = {style.popularDishDivContainer}>
-                    <img className ={style.popularDishImages} src= {pic.image} key= {pic._id} ></img>
+                    <img className ={style.popularDishImages} src= {pic.image}  ></img>
                     <span className = {style.popularDishPrice}>${pic.price}.00</span>
                 </div>
                 <div className = {style.popularDishName}>
