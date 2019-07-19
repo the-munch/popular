@@ -31,6 +31,7 @@ var seed = function seedData() {
     });
     popDish.save(function (err){
       if (err) return console.error(err);
+      console.log('saved')
     });
   }
 };

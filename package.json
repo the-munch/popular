@@ -4,9 +4,11 @@
   "description": "Popular dishes list.  That will scroll and list out the menu items and prices.",
   "main": "index.js",
   "scripts": {
-    "start": "node ./server/index.js",
+    "server": "node ./server/index.js",
     "test1": "jest",
-    "react-dev": "webpack -d --watch"
+    "react-dev": "webpack -d --watch",
+    "seed": "node ./database/seed.js",
+    "start": "npm run server && npm run seed"
   },
   "repository": {
     "type": "git",
