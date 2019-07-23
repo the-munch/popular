@@ -5,10 +5,6 @@ const bodyParser = require('body-parser');
 const db = require('../database/seed.js');
 var app = express();
 
-// var http = require('http');
-// var httpProxy = require('http-proxy');
-// var proxy = httpProxy.createProxyServer();
-
 const port = 3002;
 
 app.use(morgan('dev'));
