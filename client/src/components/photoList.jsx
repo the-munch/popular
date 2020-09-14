@@ -4,6 +4,7 @@ import style from '../style.css'
 
 const Photolist = (props) => {
     // Note:  A better way to do this is have 10 different documents from Mongo created with the same resturant ID and map them out
+    {console.log(props.data)}
     return (
         <div className = {style.containerForPopularDishImage} id = 'containerForContent'> 
             {props.data.map(pic =>
