@@ -17,7 +17,6 @@ app.use('/:id', express.static(path.resolve(__dirname, '..', 'client', 'dist')))
 
 
 app.get('/popular/:id', (req, res) => {
-  console.log('test')
   db.Dish.find({ restuarantID: req.params.id }).limit(10).exec((err, Dish) => {
     if (err) {
       console.log(err);
